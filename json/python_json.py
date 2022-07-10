@@ -4,16 +4,15 @@ import time
 
 
 
-if os.name == 'posix':
-  # for linux and unix
-  os.system('clear')
-  time.sleep(0.05)
-elif os.name == 'nt':
-  # for windows
-  os.system('cls')
-else:
-  print('Anerror occured while clearing screen')
-
+def os_type(n=os.name):
+  if os.name == n: # for linux and unix
+    os.system('clear')
+    time.sleep(0.05)
+  elif os.name == n: # for windows
+    os.system('cls')
+  else:
+    print('Anerror occured while clearing screen')
+os_type()
 
 
 # loading json from a file
