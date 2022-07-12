@@ -1,12 +1,1 @@
-{
-  'f_name': 'Yusuf',
-  'l_name': 'Musa',
-  'field': 'Health',
-  'focus': 'chemistry',
-  'is_talent': True,
-  'city': 'zaria',
-  'light': False,
-  'water': True,
-  '5g': None,
-  'name': 'kamiński'
-}
+"dict_file.txt"

@@ -47,7 +47,7 @@ dict_load = json.dumps(dict_str_1)
 dict_str_2 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
 
 with open('dict_now.txt', 'w', encoding='utf-8') as f:
-  json.dump('dict_now.txt', f, ensure_ascii=False, indent=10, separators=(',', ': '))
+  json.dump(dict_str_2, f, ensure_ascii=False, indent=8, separators=(',', ': '))
   # json.dump.close()
   
 # print(file['focus'])
