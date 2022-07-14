@@ -46,6 +46,7 @@ dict_load = json.dumps(dict_str_1)
 # loading python dictionary from a file to json
 dict_str_2 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
 
+# the below with context manager of with will create a file and write a json object in it
 with open('dict_now.txt', 'w', encoding='utf-8') as f:
   json.dump(dict_str_2, f, ensure_ascii=False, indent=8, separators=(',', ': '))
   # json.dump.close()
