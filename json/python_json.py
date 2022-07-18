@@ -26,31 +26,36 @@ with open('json_file.json') as f:
 
 
 # loading json from a string
-json_str = '{"f_name": "Yusuf", "l_name": "Musa", "field": "Health", "focus": "chemistry", "is_talent": true, "city": "zaria", "light": false, "water": true, "5g": null, "name": "kamiński"}'
+def json_from_string():
+  json_str = '{"f_name": "Yusuf", "l_name": "Musa", "field": "Health", "focus": "chemistry", "is_talent": true, "city": "zaria", "light": false, "water": true, "5g": null, "name": "kamiński"}'
 
-json_load = json.loads(json_str)
-# print(json_load['focus'])
-# print(json_load['field'])
-# print(json_load['5g'])
+  json_load = json.loads(json_str)
+  print(json_load['focus'])
+  print(json_load['field'])
+  print(json_load['5g'])
+# json_str()
 
 
 
 # loading python string dictionary to json
-dict_str_1 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
+def string_dict_to_json():
+  dict_str_1 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
 
-dict_load = json.dumps(dict_str_1)
-# print(dict_load)
+  dict_load = json.dumps(dict_str_1)
+  print(dict_load)
+# string_dict_to_json()
 
 
 
 # loading python dictionary from a file to json
-dict_str_2 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
+def json_from_dict():
+  dict_str_2 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
 
-# the below with context manager of with will create a file and write a json object in it
-with open('dict_now.txt', 'w', encoding='utf-8') as f:
-  json.dump(dict_str_2, f, ensure_ascii=False, indent=8, separators=(',', ': '))
-  # json.dump.close()
-  
-# print(file['focus'])
-# print(file['field'])
-# print(file['5g'])
+  # the below with context manager of with will create a file and write a json object in it
+  with open('dict_now.txt', 'w', encoding='utf-8') as f:
+    json.dump(dict_str_2, f, ensure_ascii=False, indent=8, separators=(',', ': '))
+
+  print(file['focus'])
+  print(file['field'])
+  print(file['5g'])
+# json_from_dict()
