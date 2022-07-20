@@ -3,7 +3,6 @@ import os
 import time
 
 
-
 def os_type(n=os.name):
   if os.name == n: # for linux and unix
     os.system('clear')
@@ -12,17 +11,20 @@ def os_type(n=os.name):
     os.system('cls')
   else:
     print('Anerror occured while clearing screen')
-os_type()
+# os_type()
+# print()
 
 
 # loading json from a file
-with open('json_file.json') as f:
-  file = json.load(f)
-  
-# print(file['focus'])
-# print(file['field'])
-# print(file['5g'])
-
+# def loading_json_from_file():
+#   with open('json_file.json') as f:
+#     file = json.load(f)
+    
+#   print(file['focus'])
+#   print(file['field'])
+#   print(file['5g'])
+# loading_json_from_file()
+# print()
 
 
 # loading json from a string
@@ -33,8 +35,8 @@ def json_from_string():
   print(json_load['focus'])
   print(json_load['field'])
   print(json_load['5g'])
-# json_str()
-
+# json_from_string()
+# print()
 
 
 # loading python string dictionary to json
@@ -44,7 +46,7 @@ def string_dict_to_json():
   dict_load = json.dumps(dict_str_1)
   print(dict_load)
 # string_dict_to_json()
-
+# print()
 
 
 # loading python dictionary from a file to json
@@ -55,7 +57,7 @@ def json_from_dict():
   with open('dict_now.txt', 'w', encoding='utf-8') as f:
     json.dump(dict_str_2, f, ensure_ascii=False, indent=8, separators=(',', ': '))
 
-  print(file['focus'])
-  print(file['field'])
-  print(file['5g'])
-# json_from_dict()
+  print(dict_str_2['focus'])
+  print(dict_str_2['field'])
+  print(dict_str_2['5g'])
+json_from_dict()
