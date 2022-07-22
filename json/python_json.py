@@ -16,13 +16,13 @@ def os_type(n=os.name):
 
 
 # loading json from a file
-# def loading_json_from_file():
-#   with open('json_file.json') as f:
-#     file = json.load(f)
+def loading_json_from_file():
+  with open('json_file.json') as f:
+    file = json.load(f)
     
-#   print(file['focus'])
-#   print(file['field'])
-#   print(file['5g'])
+  print(file['focus'])
+  print(file['field'])
+  print(file['5g'])
 # loading_json_from_file()
 # print()
 
