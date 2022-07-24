@@ -10,7 +10,7 @@ def os_type(n=os.name):
   elif os.name == n: # for windows
     os.system('cls')
   else:
-    print('Anerror occured while clearing screen')
+    print('An error occured while clearing screen')
 # os_type()
 # print()
 
@@ -53,7 +53,7 @@ def string_dict_to_json():
 def json_from_dict():
   dict_str_2 = {'f_name': 'Yusuf', 'l_name': 'Musa', 'field': 'Health', 'focus': 'chemistry', 'is_talent': True, 'city': 'zaria', 'light': False, 'water': True, '5g': None, 'name': 'kamiński'}
 
-  # the below with context manager of with will create a file and write a json object in it
+  # the below context manager of with will create a file and write a json object in it
   with open('dict_now.txt', 'w', encoding='utf-8') as f:
     json.dump(dict_str_2, f, ensure_ascii=False, indent=8, separators=(',', ': '))
 
