@@ -1,6 +1,3 @@
-import subprocess
-
-subprocess.run(['clear'])
 
 cache_data = {}
 def fibonacci(num):
