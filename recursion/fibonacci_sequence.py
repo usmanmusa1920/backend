@@ -5,7 +5,7 @@ def fibonacci(num):
     else:
         result = 1
     return result
-
+    
 for i in range(1, 13):
     print('Fibonacci of', i, 'is', fibonacci(i))
     
