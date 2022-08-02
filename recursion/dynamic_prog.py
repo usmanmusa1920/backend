@@ -1,6 +1,5 @@
-import subprocess
-
-subprocess.run(['clear'])
+# import subprocess
+# subprocess.run(['clear'])
 
 def fib(n):
     if n == 1 or n == 2:
@@ -9,11 +8,9 @@ def fib(n):
         result = fib(n-1) + fib(n-2)
     return result
 
+
 for n in range(1,15):
     print(fib(n))
-    
-    
-    
     
     
 def fib_bot(n):
