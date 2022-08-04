@@ -1,10 +1,12 @@
 import os
 import re
 
-if os.name == 'posix':
-  os.system('clear')
-else:
-  os.system('cls')
+def os_type(n=os.name):
+  if os.name == n:
+    os.system('clear')
+  else:
+    os.system('cls')
+os_type()
 
 # txt = 'Usman Musa @!./* 4421'
 # patn = re.compile(r'[\W\D]')
