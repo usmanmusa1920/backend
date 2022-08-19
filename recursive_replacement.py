@@ -7,21 +7,23 @@ from getpass import getpass
   this python script is not for hacking but just for making a recursive change of some letters
   using the .replace() method
 """
-if os.name == 'posix':
-  try:
-    sp.run(['clear'])
-  except:
-    os.system('clear')
-elif os.name == 'nt':
-  try:
-    sp.run(['cls'])
-  except:
-    os.system('cls')
-else:
-  try:
-    sp.run(['banner', 'who are you'])
-  except:
-    print('We don\'t know your system!')
+def os_type(n=os.name):
+  if os.name == n:
+    try:
+      sp.run(['clear'])
+    except:
+      os.system('clear')
+  elif os.name == n:
+    try:
+      sp.run(['cls'])
+    except:
+      os.system('cls')
+  else:
+    try:
+      sp.run(['banner', 'who are you'])
+    except:
+      print('We don\'t know your system!')
+os_type()
 
 
 class shopping_profile:
