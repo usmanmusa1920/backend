@@ -6,7 +6,7 @@ def os_type(n=os.name):
     os.system('clear')
   else:
     os.system('cls')
-os_type()
+# os_type()
 
 # txt = 'Usman Musa @!./* 4421'
 # patn = re.compile(r'[\W\D]')
