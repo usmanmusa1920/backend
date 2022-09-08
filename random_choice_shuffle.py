@@ -3,10 +3,8 @@ import random
 import datetime
 import calendar
 
-
 # clearing screen
-os.system('clear')
-
+# os.system('clear')
 
 n=int(input('num: '))
 lst = ['mango', 'appale', 'orange', 'mango', 'beans', 'rice', 'yam', 'mango', 'cassava']
