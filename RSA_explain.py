@@ -1,37 +1,8 @@
-# This program can only be run using python --version 2
-
-
-# this is a simple mini cryptograpy script which uses XOR tricks,
-# that I use to encrypt some sensitive information,
-# it will give me publick and private key, of which I will
-# use to decrypt it whenever I want
-
-
-def xor_crypt_string(data, key = 'my_secret_passwd', encode=False, decode=False):
-  from itertools import izip, cycle
-  import base64
-  
-  if decode:
-    data = base64.decodestring(data)
-  xored = ''.join(chr(ord(x) ^ ord(y)) for (x,y) in izip(data, cycle(key)))
-  
-  if encode:
-    return base64.encodestring(xored).strip()
-  return xored
-
-secret = 'Software engineer, specializiing in mostly python, and other technologies like html/css, git, linux and others'
-print('The ciper text is:')
-print(xor_crypt_string(secret, encode=True))
-print('The plain text is:')
-print(xor_crypt_string(xor_crypt_string(secret, encode=True), decode=True))
-
-
-"""---------------------------------------------------------------------------------------"""
 # modula arithmetic, some times called clock arithmetic
 # this is a one way function, in which we can't go back to, e.g:
 #     12 / 5 = 2,
 #     11 % 5 = 1,
-#     21 % 7 = 0
+#     15 % 5 = 0
 
 
 """Diffie-Hellman-Merkle key exchange"""
@@ -70,7 +41,7 @@ print(xor_crypt_string(xor_crypt_string(secret, encode=True), decode=True))
 # RSA public key cryptography
 # using M ^ E (mod N) where `E` is 7
 """
-  Alice picks teo primes `P` and `Q`,
+  Alice picks two primes `P` and `Q`,
   say 17 and 19.
   
   And multiplies them together to get
@@ -103,4 +74,7 @@ print(xor_crypt_string(xor_crypt_string(secret, encode=True), decode=True))
   M = C ^ D (mod N)
   M = 13 ^ 247 (mod 323)
   M = 72, which is `H` in ascii
+  
+  find more explanation on:
+  https://www.androidauthority.com/public-key-cryptography-717863/
 """
