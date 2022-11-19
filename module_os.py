@@ -4,23 +4,24 @@ from datetime import datetime
 #os.chdir('/home/usman/Desktop')
 print(os.getcwd())
 
-#for removing a single directory
+#for making a single directory
 try:
   os.mkdir('mmme')
 except:
   pass
-#for removing a directory tree, similar to 'rm -rf /me/you/them' (recursively)
+#for creating a directory tree, similar to 'mkdir -p /me/you/them' (recursively)
 try:
   os.makedirs('ko/l')
 except:
   pass
 
-#for making a single directory
+
+#for removing a single directory
 try:
   os.rmdir('mmme')
 except:
   pass
-#for creating a directory tree, similar to 'mkdir -p /me/you/them' (recursively)
+#for removing a directory tree, similar to 'rm -rf /me/you/them' (recursively)
 try:
   os.removedirs('ko/l')
 except:
