@@ -21,7 +21,7 @@ def outer():
     return "The result is %i" % eval(f"{x + y}")
 
 my_func = outer
-print(my_func())
+# print(my_func())
 # Output:
 #   The result is 30
 
@@ -32,8 +32,10 @@ def html_tag(tag):
 
 h1_tag = html_tag('h1')
 
-# print(h1_tag) # this will print ``` <function html_tag.<locals>.print_tag at 0x7f9c808879d0> ```
-# print(h1_tag('This is a headline!'))
+print(h1_tag) # this will print ``` <function html_tag.<locals>.print_tag at 0x7f9c808879d0> ```
+print(h1_tag('This is a h1 tag of html (headline!)'))
+# Output:
+#   <h1>This is a h1 tag of html (headline!)</h1>
 
 
 """   Decorator code   """
