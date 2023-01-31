@@ -103,6 +103,6 @@ def display_info(name, age):
 
 
 def c_alpha(v):
-    return 1 if v == 5 else 2
+    return 1 if v == 5 else 2 # this is a one line if else statement
 # print(c_alpha(5))
 # print(c_alpha(3))
