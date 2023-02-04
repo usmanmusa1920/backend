@@ -32,8 +32,8 @@ def html_tag(tag):
 
 h1_tag = html_tag('h1')
 
-print(h1_tag) # this will print ``` <function html_tag.<locals>.print_tag at 0x7f9c808879d0> ```
-print(h1_tag('This is a h1 tag of html (headline!)'))
+# print(h1_tag) # this will print ``` <function html_tag.<locals>.print_tag at 0x7f9c808879d0> ```
+# print(h1_tag('This is a h1 tag of html (headline!)'))
 # Output:
 #   <h1>This is a h1 tag of html (headline!)</h1>
 
@@ -98,7 +98,10 @@ def my_timer(orig_func):
 def display_info(name, age):
     time.sleep(1)
     print('display_info ran with arguments ({}, {})'.format(name, age))
-# display_info('Tom', 22)
+display_info('Usman', 19)
+# Output:
+#   display_info ran with arguments (Usman, 19)
+#   display_info ran in: 1.0009398460388184 sec
 
 
 
