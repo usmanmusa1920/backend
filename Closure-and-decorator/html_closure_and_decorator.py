@@ -18,10 +18,12 @@ def outer():
         y = 20
         return y
     y = inner()
-    return x + y
+    return "The result is %i" % eval(f"{x + y}")
 
 my_func = outer
 print(my_func())
+# Output:
+#   The result is 30
 
 def html_tag(tag):
     def print_tag(text):
