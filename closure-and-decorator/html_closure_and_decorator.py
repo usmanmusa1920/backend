@@ -1,4 +1,9 @@
 
+# function base decorator: https://stackoverflow.com/questions/739654/how-do-i-make-function-decorators-and-chain-them-together
+
+# class base decorator: https://stackoverflow.com/questions/5929107/decorators-with-parameters/5929178#5929178
+
+
 """   Closure   """
 # A closure is the combination of a function bundled together (enclosed) with references to its
 # surrounding state (the lexical environment). In other words, a closure gives you access to an outer
