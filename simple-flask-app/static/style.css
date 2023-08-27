@@ -1,0 +1,17 @@
+.head_link{
+  color: green;
+}
+
+.page_title{
+  background: dodgerblue;
+  color: white;
+  padding: 3px 10px;
+}
+
+.post{
+  margin: 5px 3px;
+  padding: 7px 10px;
+  border: solid grey 1px;
+  border-radius: 5px;
+  background: whitesmoke;
+}
