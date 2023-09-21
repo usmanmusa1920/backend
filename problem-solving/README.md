@@ -3,10 +3,10 @@
 
 # Problem solving repository
 
-This repository contains code written in python, c programming, and c++.
+This repository contains code written in python, c programming, and c++. Mainly on problem solving strategy, you can clone this repo by,
 
-Mainly on problem solving strategy, you can clone this repo by,
+```sh
+git clone https://github.com/usmanmusa1920/problem-solving.git
+```
 
-`git clone https://github.com/usmanmusa1920/problem-solving.git`
-
-![](img.jpeg)
+![Problem soving](img.jpeg)

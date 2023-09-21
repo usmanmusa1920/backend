@@ -1,4 +1,4 @@
 
-# Python
+# Backend
 
-This repository contains awesome codes of python, showing how to use python, some notable built-in library of python, also some tricks of problem solving
+This repository contains awesome backend code snippets, showing how to use python, some notable built-in library of python, some tricks of problem solving, c family program, and others.

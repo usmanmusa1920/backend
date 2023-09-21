@@ -2,25 +2,25 @@
 
 This is a simple flask application that can be run locally, also it is decorise using docker container. The content of the `docker-compose.yml` file is:
 
-```
+```yml
 version: '3.7'
 services:
-  sakyum_service:
-    build:
-      context: .
-    ports:
-      - "5000:5000"
+    sakyum_service:
+        build:
+            context: .
+        ports:
+            - "5000:5000"
 ```
 
 save the file and spinup the services, by runing the command below::
 
-```
+```sh
 docker-compose up
 ```
 
 you can use the command below instead of the above, in other to see how it build the image::
 
-```
+```sh
 docker-compose up --build
 ```
 
