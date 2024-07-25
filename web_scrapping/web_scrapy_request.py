@@ -19,7 +19,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # with open("index.html") as f:
-#   soup = BeautifulSoup(f, 'lxml')
+#     soup = BeautifulSoup(f, 'lxml')
 # print(soup.prettify())
 
 
@@ -38,6 +38,6 @@ soup = BeautifulSoup(source, 'lxml')
 # print(f.prettify())
 
 for f in soup.find_all('div', class_='post_content_column'):
-  title = f.h1.text
-  summary = f.p.text
-  print(title, "\n", summary, "\n")
+    title = f.h1.text
+    summary = f.p.text
+    print(title, "\n", summary, "\n")

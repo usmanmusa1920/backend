@@ -25,7 +25,7 @@ t1 = time.perf_counter()
 size = (100, 100)
 
 def process_image(img_name):
-# for img_name in img_names:
+    # for img_name in img_names:
     img = Image.open(img_name)
     
     img = img.filter(ImageFilter.GaussianBlur(7))

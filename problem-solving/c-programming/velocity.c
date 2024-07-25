@@ -4,33 +4,33 @@
 // calculate and display displacement(s) using formula [S = ut + 0.5at^2]
 
 int main(){
-  float acc; // acceleration
-  float time; // time
-  float vel;  // velocity
-  float dis;  // displacement
-  float ut;  // velocity * time
-  float at;  // acceleration * time
-  float at_sqrt;  // at ^ 2
-  float times_point_5;  // at_sqrt * 0.5
+    float acc; // acceleration
+    float time; // time
+    float vel;  // velocity
+    float dis;  // displacement
+    float ut;  // velocity * time
+    float at;  // acceleration * time
+    float at_sqrt;  // at ^ 2
+    float times_point_5;  // at_sqrt * 0.5
 
-  printf("Enter velocity: ");
-  scanf("%f", &vel);
+    printf("Enter velocity: ");
+    scanf("%f", &vel);
 
-  printf("Enter acceleration: ");
-  scanf("%f", &acc);
+    printf("Enter acceleration: ");
+    scanf("%f", &acc);
 
-  printf("Enter time: ");
-  scanf("%f", &time);
+    printf("Enter time: ");
+    scanf("%f", &time);
 
-  ut = vel * time;
-  at = acc * time;
-  at_sqrt = at * at;
-  times_point_5 = at_sqrt * 0.5;
+    ut = vel * time;
+    at = acc * time;
+    at_sqrt = at * at;
+    times_point_5 = at_sqrt * 0.5;
 
-  dis = ut + times_point_5;
+    dis = ut + times_point_5;
 
-  printf("The displacement is: %f\n", dis);
-  return 0;
+    printf("The displacement is: %f\n", dis);
+    return 0;
 }
 
 /*

@@ -7,25 +7,25 @@ program to accept input from user.
 */
 
 int main(){
-  float radius;
-  float step_1;
-  float step_2;
-  float step_3;
-  float step_4;
+    float radius;
+    float step_1;
+    float step_2;
+    float step_3;
+    float step_4;
 
-  printf("Enter circle radius: ");
-  scanf("%f", &radius);
+    printf("Enter circle radius: ");
+    scanf("%f", &radius);
 
-  // for area
-  step_1 = 2 * M_PI;
-  step_2 = radius * radius;
-  step_3 = M_PI * step_2;
-  printf("\tThe area of the circle is: %f\n", step_3);
+    // for area
+    step_1 = 2 * M_PI;
+    step_2 = radius * radius;
+    step_3 = M_PI * step_2;
+    printf("\tThe area of the circle is: %f\n", step_3);
 
-  // for circumference
-  step_4 = step_1 * radius;
-  printf("\tThe circumference of the circle is: %f\n", step_4);
-  return 0;
+    // for circumference
+    step_4 = step_1 * radius;
+    printf("\tThe circumference of the circle is: %f\n", step_4);
+    return 0;
 }
 
 /*

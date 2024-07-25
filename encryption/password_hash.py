@@ -22,9 +22,9 @@ itter = random.randrange(260000, 400000, 20)
 
 password = input('Enter a password: ')
 while password == '' or password == ' ':
-  if password == ' ':
-    print('\nPassword can\'t be empty space')
-  password = input('Please enter a password: ')
+    if password == ' ':
+        print('\nPassword can\'t be empty space')
+    password = input('Please enter a password: ')
 
 key = hashlib.pbkdf2_hmac(
     'sha256', # The hash digest algorithm for HMAC
@@ -55,15 +55,15 @@ print('\nThis is the hashlib:\n', h_val, sep='')
 # backup code for a user
 print('\nThese are your 5 backup code:')
 for i in range(5):
-  j = " ".join(random.sample(token_3*3,9))
-  lst = list(j)
-  lst[1] = ''
-  lst[3] = ''
-  lst[7] = ''
-  lst[9] = ''
-  lst[13] = ''
-  lst[15] = ''
-  print(' ', ''.join(lst))
+    j = " ".join(random.sample(token_3*3,9))
+    lst = list(j)
+    lst[1] = ''
+    lst[3] = ''
+    lst[7] = ''
+    lst[9] = ''
+    lst[13] = ''
+    lst[15] = ''
+    print(' ', ''.join(lst))
 
 
 print('\nYour API token is:\n', ''.join(random.sample(token_5*100, random.randrange(900, 1000, 100))), sep='')

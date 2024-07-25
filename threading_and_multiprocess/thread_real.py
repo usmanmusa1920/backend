@@ -23,10 +23,11 @@ img_urls = [
 t1 = time.perf_counter()
 
 def download_image(img_url):
-# for img_url in img_urls:
+    # for img_url in img_urls:
     img_bytes = requests.get(img_url).content
     img_name = img_url.split('/')[-1]
     img_name = f'pic-{img_name}'
+
     with open(img_name, 'wb') as img_file:
         img_file.write(img_bytes)
         print(f'{img_name} was downloaded...')

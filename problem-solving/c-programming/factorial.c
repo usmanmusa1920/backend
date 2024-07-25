@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 int main(){
-  int n;
-  int i = 0;
-  char name[10];
+    int n;
+    int i = 0;
+    char name[10];
 
-  printf("Enter number: ");
-  scanf("%d", &n);
-  printf("%d\n", n);
+    printf("Enter number: ");
+    scanf("%d", &n);
+    printf("%d\n", n);
 
-  printf("Enter char: ");
-  scanf("%s", name);
-  printf("%s\n", name);
+    printf("Enter char: ");
+    scanf("%s", name);
+    printf("%s\n", name);
 
-  int fact = 1;
-  while (i < n){
-    i = i + 1;
-    fact = fact * i;
-    printf("Factorial of %d is %d\n", i, fact);
-  }
-  return 0;
+    int fact = 1;
+    while (i < n){
+        i = i + 1;
+        fact = fact * i;
+        printf("Factorial of %d is %d\n", i, fact);
+    }
+    return 0;
 }
 
 /*

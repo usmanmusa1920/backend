@@ -8,4 +8,3 @@ def factorial(num):
         
 for i in range(1, 11):
     print('Factorial of', i, 'is', factorial(i))
-

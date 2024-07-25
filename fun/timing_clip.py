@@ -14,6 +14,6 @@ count_items(['1', '3', '9', '4'])
 l = 'I am Usman Musa'
 
 for i in l:
-  time.sleep(0.2)
-  print(i, end='', flush=True)
+    time.sleep(0.2)
+    print(i, end='', flush=True)
 print()

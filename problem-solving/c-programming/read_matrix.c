@@ -9,25 +9,25 @@ same on the screen, enable your program to accept input from user.
 #define MAXCOL 3
 
 int main(){
-  int matrix[MAXROW][MAXCOL];
+    int matrix[MAXROW][MAXCOL];
 
-  printf("\nEnter matrix elements :\n");
-  for(int i = 0; i < 3; i++){
-    for(int j = 0; j < 3; j++){
-      printf("Enter element of row %d column %d [%d, %d] : ",i + 1, j + 1, i + 1, j + 1);
-      scanf("%d", &matrix[i][j]);
+    printf("\nEnter matrix elements :\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            printf("Enter element of row %d column %d [%d, %d] : ",i + 1, j + 1, i + 1, j + 1);
+            scanf("%d", &matrix[i][j]);
+        }
+        printf("\n"); // new line after row elements
     }
-    printf("\n"); // new line after row elements
-  }
 
-  printf("\nThe matrix is :\n");
-  for(int i = 0; i < 3; i++){
-    for(int j = 0; j < 3; j++){
-      printf("  %d\t", matrix[i][j]);
+    printf("\nThe matrix is :\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            printf("  %d\t", matrix[i][j]);
+        }
+        printf("\n"); // new line after row elements
     }
-    printf("\n"); // new line after row elements
-  }
-  return 0;
+    return 0;
 }
 
 /*

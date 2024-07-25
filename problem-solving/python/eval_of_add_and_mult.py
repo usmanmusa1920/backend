@@ -8,4 +8,3 @@ mult = num1 * num2
 
 print('The addition of the numbers is: ', abs(add))
 print('The multiplication of the numbers is: ', abs(mult))
-

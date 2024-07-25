@@ -3,31 +3,26 @@ import re
 from getpass import getpass
 from datetime import datetime
 
+os_name = os.name
 
-
-if os.name == 'posix':
+if os_name == 'posix':
     os.system('clear')
-elif os.name == 'nt':
+elif os_name == 'nt':
     os.system('cls')
 else:
     print('We don\'t know your system')
-    
-    
+
 
 class person:
     def __init__(self,
-                 
-                 first = '',
-                 last = '',
-                 gender = '',
-                 birthday = '',
-                 phone = '',
-                 passwd_1 = '',
-                 passwd_2 = '',
-                 
-                 ):
-        
-        
+        first = '',
+        last = '',
+        gender = '',
+        birthday = '',
+        phone = '',
+        passwd_1 = '',
+        passwd_2 = '',
+    ):
         self.first  = first
         self.last = last
         self.gender = gender
@@ -35,7 +30,6 @@ class person:
         self.phone = phone
         self.passwd_1 = passwd_1
         self.passwd_2 = passwd_2
-        
         
         while self.first == '':
             self.first = input('First name: ')
@@ -73,8 +67,8 @@ class person:
                 self.passwd_1 = getpass('Enter password: ')
                 self.passwd_2 = getpass('Enter password (again): ')
             pass
-                
-                
+        
+
     # this method will be saved in the <user>@sqlite.txt file
     def user_info(self):
         if self.gender == 'female':
@@ -85,7 +79,7 @@ class person:
     # This method create the file  <user>@sqlite.txt
     def account_name(self):
         return self.first + self.last + '@sqlite.txt'
-                
+    
         # Here we check to see if a file with the user name already exist, if it exist it will ask him for the password, that he setup when creating it and if it match it he has the right to modify the file, ELSE he will be thrown away
         # But in the case if the file does not exist it will create a new one for him
     
@@ -134,9 +128,8 @@ class person:
         new_file.write(self.user_info())
         new_file.close()
         return 'Your new file has been created! (' + file_user + ')'
-        
-        
-        
+    
+    
     """ this method will check to see if the user birthday is equal to the current date, and if it is it will welcome hime with happy birthday message """
     def happ_birthday(self):
         

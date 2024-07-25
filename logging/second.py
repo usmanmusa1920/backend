@@ -14,27 +14,27 @@ logger.addHandler(file_handler)
 #logging.basicConfig(level=logger.INFO, format=' [+] %(asctime)s:%(levelname)s:%(message)s')
 
 class student:
-  def __init__(self, first: 'first name', last) -> 'Normal':
-    self.first = first
-    self.last = last
+    def __init__(self, first: 'first name', last) -> 'Normal':
+        self.first = first
+        self.last = last
+        
+        print(f"New student: {self.fullname} - {self.email}")
+        
+    def info(self: bool) -> 'hh':
+        return 'Wow it is annotation'
+        
+    @property
+    def email(self):
+        return '{}.{}@gmail.com'.format(self.first, self.last)
     
-    print(f"New student: {self.fullname} - {self.email}")
+    @property
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+        
+    def __str__(self: False) -> None:
+        return 'True'
     
-  def info(self: bool) -> 'hh':
-    return 'Wow it is annotation'
-    
-  @property
-  def email(self):
-    return '{}.{}@gmail.com'.format(self.first, self.last)
-  
-  @property
-  def fullname(self):
-    return '{} {}'.format(self.first, self.last)
-    
-  def __str__(self: False) -> None:
-    return 'True'
-  
-  
+
 s1 = student('Usman', 'Musa')
 s2 = student('Aliyu', 'Sani')
 s3 = student('Muhammad', 'Umar')
@@ -46,16 +46,3 @@ logging.info(s3)
 #print(s1.__str__.__annotations__)
 #print(s1.__init__.__annotations__)
 logger.info(s1.info())
-
-
-
-
-
-
-
-
-
-
-
-
-

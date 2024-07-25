@@ -5,31 +5,31 @@ A C program to swap numbers, enable your program to accept input from user.
 */
 
 int main(){
-  int a;
-  int b;
-  int c; // we use this variable to briefly store a value
+    int a;
+    int b;
+    int c; // we use this variable to briefly store a value
 
-  printf("Enter first number: ");
-  scanf("%d", &a);
+    printf("Enter first number: ");
+    scanf("%d", &a);
 
-  printf("Enter second number: ");
-  scanf("%d", &b);
+    printf("Enter second number: ");
+    scanf("%d", &b);
 
-  printf("\nYou entered `%d, %d` (a and b) respectively\n", a, b);
-  printf("Values before swap are:\n\ta = %d\n\tb = %d\n", a, b);
+    printf("\nYou entered `%d, %d` (a and b) respectively\n", a, b);
+    printf("Values before swap are:\n\ta = %d\n\tb = %d\n", a, b);
 
-  // swapping numbers of `a` and `b`
-  a = a + b;
-  b = a - b;
-  a = a - b;
+    // swapping numbers of `a` and `b`
+    a = a + b;
+    b = a - b;
+    a = a - b;
 
-  // c = a;
-  // a = b;
-  // b = c;
-  
-  printf("Values after swap are:\n\ta = %d\n\tb = %d\n", a, b);
+    // c = a;
+    // a = b;
+    // b = c;
+    
+    printf("Values after swap are:\n\ta = %d\n\tb = %d\n", a, b);
 
-  return 0;
+    return 0;
 }
 
 /*

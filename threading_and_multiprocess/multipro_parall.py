@@ -12,9 +12,11 @@ def do_something(seconds):
 # def do_something():
     # print('Sleeping 1 second...')
     print('Sleeping {} second(s)...'.format(seconds))
+
     # time.sleep(1)
     time.sleep(seconds)
     return f'Done sleeping...{seconds}'
+
     # print(f'Done sleeping...')
     # print(f'Done sleeping...{seconds}')
     

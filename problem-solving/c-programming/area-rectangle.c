@@ -3,20 +3,20 @@
 // calculate area of rectangle
 
 int main(){
-  float breadth;
-  float length;
-  float area;
+    float breadth;
+    float length;
+    float area;
 
-  printf("Enter the breadth: ");
-  scanf("%f", &breadth);
+    printf("Enter the breadth: ");
+    scanf("%f", &breadth);
 
-  printf("Enter the length: ");
-  scanf("%f", &length);
+    printf("Enter the length: ");
+    scanf("%f", &length);
 
-  area = length * breadth;
+    area = length * breadth;
 
-  printf("The area of the rectangle is: %f\n", area);
-  return 0;
+    printf("The area of the rectangle is: %f\n", area);
+    return 0;
 }
 
 /*

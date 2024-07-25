@@ -21,25 +21,25 @@ blue = [0,0,1,1]
 purple = [1,0,1,1]
 
 class MyApp(App):
-  def build(self):
+    def build(self):
+        
+        # label = Label(text='Hello world kivy', size_hint=(.5, .5), pos_hint={'center_x': .5, 'center_y': .5})
+        
+        # img = Image(source='/home/usman/Desktop/image/Usman.jpg', size_hint=(.5, .5), pos_hint={'center_x': .5, 'center_y': .5})
+        
+        layout = BoxLayout(padding=10)
+        colors = [red,green,blue,purple]
+        
+        for i in range(5):
+            btn = Button(text="Button %s" % (i+1), font_size='10sp', size_hint=(0.1, 0.05), background_color=random.choice(colors))
+            btn.bind(on_press=self.callback)
+            
+            layout.add_widget(btn)
+        return layout
     
-    # label = Label(text='Hello world kivy', size_hint=(.5, .5), pos_hint={'center_x': .5, 'center_y': .5})
-    
-    # img = Image(source='/home/usman/Desktop/image/Usman.jpg', size_hint=(.5, .5), pos_hint={'center_x': .5, 'center_y': .5})
-    
-    layout = BoxLayout(padding=10)
-    colors = [red,green,blue,purple]
-    
-    for i in range(5):
-      btn = Button(text="Button %s" % (i+1), font_size='10sp', size_hint=(0.1, 0.05), background_color=random.choice(colors))
-      btn.bind(on_press=self.callback)
-      
-      layout.add_widget(btn)
-    return layout
-  
-  def callback(self, event):
-    txt = ['Weldone my boss!','I greet you','Are you human','Who are you']
-    print(random.choice(txt))
+    def callback(self, event):
+        txt = ['Weldone my boss!','I greet you','Are you human','Who are you']
+        print(random.choice(txt))
   
 if __name__=='__main__':
-  MyApp().run()
+    MyApp().run()

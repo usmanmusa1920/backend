@@ -20,9 +20,9 @@ description = soup.body.findAll('dd')
 function_usage = []
 
 for item in description:
-  item = item.text
-  item = item.replace('\n', ' ')
-  function_usage.append(item)
+	item = item.text
+	item = item.replace('\n', ' ')
+	function_usage.append(item)
 
 print('list of function names:',function_names[:5])
 print('\nfunction description:', function_usage[0])

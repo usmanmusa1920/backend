@@ -4,29 +4,29 @@
 // by using the value entered in the keyboard
 
 int main(){
-  float angle_a;
-  float angle_b;
-  float angle_c;
-  float sum;
+    float angle_a;
+    float angle_b;
+    float angle_c;
+    float sum;
 
-  printf("Enter value for angle a: ");
-  scanf("%f", &angle_a);
+    printf("Enter value for angle a: ");
+    scanf("%f", &angle_a);
 
-  printf("Enter value for angle b: ");
-  scanf("%f", &angle_b);
+    printf("Enter value for angle b: ");
+    scanf("%f", &angle_b);
 
-  printf("Enter value for angle c: ");
-  scanf("%f", &angle_c);
+    printf("Enter value for angle c: ");
+    scanf("%f", &angle_c);
 
-  sum = angle_a + angle_b + angle_c;
+    sum = angle_a + angle_b + angle_c;
 
-  if (sum == 180){
-    printf("The triangle is valid\n");
-  }else{
-    printf("The triangle is in-valid\n");
-  }
+    if (sum == 180){
+        printf("The triangle is valid\n");
+    }else{
+        printf("The triangle is in-valid\n");
+    }
 
-  return 0;
+    return 0;
 }
 
 /*OUTPUT 1

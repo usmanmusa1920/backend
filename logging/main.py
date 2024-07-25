@@ -1,12 +1,12 @@
 import logging
 
 """
-  NOTSET    ---  0
-  DEBUG     ---  10
-  INFO      ---  20
-  WARNING   ---  30  (default)
-  ERROR     ---  40
-  CRITICAL  ---  50
+NOTSET    ---  0
+DEBUG     ---  10
+INFO      ---  20
+WARNING   ---  30  (default)
+ERROR     ---  40
+CRITICAL  ---  50
 """
 
 import second
@@ -37,36 +37,36 @@ logger.addHandler(stream_handler)
 
 
 def add(a, b):
-  """ an addition function """
-  r = a + b
-  return f"The addition of {a} and {b} is: {r}"
+    """ an addition function """
+    r = a + b
+    return f"The addition of {a} and {b} is: {r}"
 
 
 def subt(a, b):
-  """ a subtraction function """
-  r = a - b
-  return f"The subtraction of {a} and {b} is: {r}"
+    """ a subtraction function """
+    r = a - b
+    return f"The subtraction of {a} and {b} is: {r}"
 
 
 def mult(a, b):
-  """ a multiplication function """
-  r = a * b
-  return f"The multiple of {a} and {b} is: {r}"
+    """ a multiplication function """
+    r = a * b
+    return f"The multiple of {a} and {b} is: {r}"
 
 
 def div(a, b):
-  """ a division function """
-  try:
-    r = a / b
-  except ZeroDivisionError:
-    #to include the traceback of the error
-    logger.exception('Try to divide by zero')
-  else:
-    return f"the division of {a} by {b} is: {r}"
+    """ a division function """
+    try:
+        r = a / b
+    except ZeroDivisionError:
+        #to include the traceback of the error
+        logger.exception('Try to divide by zero')
+    else:
+        return f"the division of {a} by {b} is: {r}"
 
 def info():
-  """ an informaion function """
-  return f'Hi i am from main'
+    """ an informaion function """
+    return f'Hi i am from main'
 
 num1 = 8
 num2 = 0
@@ -77,16 +77,3 @@ logger.debug(add(num1, num2))
 logger.debug(subt(num1, num2))
 logger.debug(mult(num1, num2))
 logger.debug(div(num1, num2))
-
-
-
-
-
-
-
-
-
-
-
-
-

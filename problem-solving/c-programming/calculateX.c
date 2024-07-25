@@ -12,26 +12,26 @@ Test your program for the following values:
 */
 
 int main(){
-  int a;
-  int b;
-  int c;
-  float X;
-  float sub; // this will store value of `b - c`
+    int a;
+    int b;
+    int c;
+    float X;
+    float sub; // this will store value of `b - c`
 
-  printf("Enter value of a: ");
-  scanf("%d", &a);
+    printf("Enter value of a: ");
+    scanf("%d", &a);
 
-  printf("Enter value of b: ");
-  scanf("%d", &b);
+    printf("Enter value of b: ");
+    scanf("%d", &b);
 
-  printf("Enter value of c: ");
-  scanf("%d", &c);
+    printf("Enter value of c: ");
+    scanf("%d", &c);
 
-  sub = b - c; // subtracting `c value` from `b value`
-  X = a / sub;
-  printf("The value of X is: %f\n", X);
+    sub = b - c; // subtracting `c value` from `b value`
+    X = a / sub;
+    printf("The value of X is: %f\n", X);
 
-  return 0;
+    return 0;
 }
 
 /*

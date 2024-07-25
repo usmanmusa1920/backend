@@ -7,7 +7,7 @@ data = [
 
 # here we do a for loop in the list of list above, and get the entire data for each list by the asteric sign
 for row in data:
-  print(*row, sep=', ', end=', ')
+    print(*row, sep=', ', end=', ')
 print()
 
 
@@ -16,5 +16,5 @@ d = {}
 
 # here we count the number of alphabet in the string above (S), by nagating the duplicate but including how many times an alphabet appear
 for i in S:
-  d[i] = d.get(i, 0) + 1
+    d[i] = d.get(i, 0) + 1
 print(d)

@@ -8,8 +8,8 @@ import f1
 o = f1.one()
 u = f1.two()
 class A:
-  def __init__(self, *args, **kwargs):
-    print('init')
+    def __init__(self, *args, **kwargs):
+        print('init')
     
     
 # print(type(A.__new__(2, x=1)).init(4, X=1))

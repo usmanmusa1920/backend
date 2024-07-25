@@ -84,6 +84,6 @@ someone = 3472348
 # 1010111010101
 # 0000000000001
 if someone & 1 == 0:
-  print('even')
+    print('even')
 else:
-  print('odd')
+    print('odd')

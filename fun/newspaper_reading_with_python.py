@@ -8,11 +8,11 @@ my_str = '\tI am Usman Musa, software developer from Nigeria, I am so eager to d
 print()
 
 for i in my_str:
-  print(i, end='', flush=True)
-  if i == ',':
-    time.sleep(1)
-  else:
-    time.sleep(0.1)
+    print(i, end='', flush=True)
+    if i == ',':
+        time.sleep(1)
+    else:
+        time.sleep(0.1)
 print()
 time.sleep(1)
 print()
