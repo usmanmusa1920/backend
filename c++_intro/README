@@ -1,0 +1,1237 @@
+# Compile and Execute C++ Program
+
+```c++
+// Let's look at how to save the file, compile and run the program. Please follow the steps given below −
+
+#include <iostream>
+
+int main(){
+    cout << "Hello, World";
+    return 0;
+}
+
+// Open a text editor and add the code as above.
+
+// Save the file as: hello.cpp
+
+// Type 'g++ hello.cpp' and press enter to compile your code. If there are no errors in your code the terminal will take you to the next line and would generate a.out executable file.
+
+// Now, type './a.out' to run your program.
+
+// You will be able to see ' Hello, World ' printed on the terminal.
+
+
+// Make sure that g++ is in your path and that you are running it in the directory containing file hello.cpp.
+
+// You can compile C/C++ programs using makefile. For more details, you can check our 'Makefile Tutorial' @ https://www.tutorialspoint.com/makefile/index.htm
+
+
+// C++ Identifiers
+// A C++ identifier is a name used to identify a variable, function, class, module, or any other user-defined item. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores, and digits (0 to 9).
+
+// C++ does not allow punctuation characters such as @, $, and % within identifiers. C++ is a case-sensitive programming language. Thus, Manpower and manpower are two different identifiers in C++.
+
+// Here are some examples of acceptable identifiers −
+
+// mohd       zara    abc   move_name  a_123
+// myname50   _temp   j     a23b9      retVal
+// C++ Keywords
+// The following list shows the reserved words in C++. These reserved words may not be used as constant or variable or any other identifier names.
+
+// asm	else	new	this
+// auto	enum	operator	throw
+// bool	explicit	private	true
+// break	export	protected	try
+// case	extern	public	typedef
+// catch	false	register	typeid
+// char	float	reinterpret_cast	typename
+// class	for	return	union
+// const	friend	short	unsigned
+// const_cast	goto	signed	using
+// continue	if	sizeof	virtual
+// default	inline	static	void
+// delete	int	static_cast	volatile
+// do	long	struct	wchar_t
+// double	mutable	switch	while
+// dynamic_cast	namespace	template	 
+// Trigraphs
+// A few characters have an alternative representation, called a trigraph sequence. A trigraph is a three-character sequence that represents a single character and the sequence always starts with two question marks.
+
+// Trigraphs are expanded anywhere they appear, including within string literals and character literals, in comments, and in preprocessor directives.
+
+// Following are most frequently used trigraph sequences −
+
+// Trigraph	Replacement
+// ??=	#
+// ??/	\
+// ??'	^
+// ??(	[
+// ??)	]
+// ??!	|
+// ??<	{
+// ??>	}
+// ??-	~
+// All the compilers do not support trigraphs and they are not advised to be used because of their confusing nature.
+```
+
+## Omitting Namespace
+
+```c++
+// You might see some C++ programs that runs without the standard namespace library. The `using namespace std` line can be omitted and replaced with the `std` keyword, followed by the :: (`std::cout`) operator for some objects:
+
+    #include <iostream>
+
+    int main() {
+        std::cout << "Hello World!";
+        return 0;
+    }
+```
+
+# C++ Variables
+
+```c++
+// Variables are containers for storing data values.
+
+// In C++, there are different types of variables (defined with different keywords), for example:
+
+// int - stores integers (whole numbers), without decimals, such as 123 or -123
+// double - stores floating point numbers, with decimals, such as 19.99 or -19.99
+// char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+// string - stores text, such as "Hello World". String values are surrounded by double quotes
+// bool - stores values with two states: true or false
+```
+
+## Basic Data Types
+
+```c++
+// The data type specifies the size and type of information the variable will store:
+
+// Data Type	Size	Description
+// boolean	1 byte	Stores true or false values
+// char	1 byte	Stores a single character/letter/number, or ASCII values
+// int	2 or 4 bytes	Stores whole numbers, without decimals
+// float	4 bytes	Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits
+// double	8 bytes	Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits
+```
+
+## C++ Arrays
+
+```c++
+// Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+// To declare an array, define the variable type, specify the name of the array followed by square brackets and specify the number of elements it should store:
+
+string cars[4];
+// We have now declared a variable that holds an array of four strings. To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:
+
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+// To create an array of three integers, you could write:
+
+int myNum[3] = {10, 20, 30};
+
+// Access the Elements of an Array
+// You access an array element by referring to the index number inside square brackets [].
+
+// This statement accesses the value of the first element in cars:
+
+// Example
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+cout << cars[0];
+// Outputs Volvo
+```
+
+<!-- Change an Array Element
+To change the value of a specific element, refer to the index number: -->
+
+`cars[0] = "Opel";`
+
+```c++
+// C++ Arrays and Loops
+// Loop Through an Array
+// You can loop through the array elements with the for loop.
+
+// The following example outputs all elements in the cars array:
+
+// Example
+string cars[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+for (int i = 0; i < 5; i++) {
+  cout << cars[i] << "\n";
+}
+// This example outputs the index of each element together with its value:
+
+// Example
+string cars[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+for (int i = 0; i < 5; i++) {
+    cout << i << " = " << cars[i] << "\n";
+}
+// And this example shows how to loop through an array of integers:
+
+// Example
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i < 5; i++) {
+    cout << myNumbers[i] << "\n";
+}
+// The foreach Loop
+// There is also a "for-each loop" (introduced in C++ version 11 (2011), which is used exclusively to loop through elements in an array:
+
+// Syntax
+for (type variableName : arrayName) {
+    // code block to be executed
+}
+// The following example outputs all elements in an array, using a "for-each loop":
+
+// Example
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i : myNumbers) {
+    cout << i << "\n";
+}
+```
+
+
+
+## Function
+
+```c++
+// Create a function
+void myFunction() {
+    cout << "I just got executed!";
+}
+
+int main() {
+    myFunction(); // call the function
+    return 0;
+}
+
+// Outputs "I just got executed!"
+
+
+// ADVERTISEMENT
+// Function Declaration and Definition
+// A C++ function consist of two parts:
+
+// Declaration: the return type, the name of the function, and parameters (if any)
+// Definition: the body of the function (code to be executed)
+void myFunction() { // declaration
+    // the body of the function (definition)
+}
+// Note: If a user-defined function, such as myFunction() is declared after the main() function, an error will occur:
+
+// Example
+int main() {
+    myFunction();
+    return 0;
+}
+
+void myFunction() {
+    cout << "I just got executed!";
+}
+
+// Error
+
+// However, it is possible to separate the declaration and the definition of the function - for code optimization.
+
+// You will often see C++ programs that have function declaration above main(), and function definition below main(). This will make the code better organized and easier to read:
+
+// Example
+// Function declaration
+void myFunction();
+
+// The main method
+int main() {
+    myFunction();  // call the function
+    return 0;
+}
+
+// Function definition
+void myFunction() {
+    cout << "I just got executed!";
+}
+```
+
+## C++ Function Parameters
+
+```c++
+// Parameters and Arguments
+// Information can be passed to functions as a parameter. Parameters act as variables inside the function.
+
+// Parameters are specified after the function name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma:
+
+// Syntax
+void functionName(parameter1, parameter2, parameter3) {
+    // code to be executed
+}
+// The following example has a function that takes a string called fname as parameter. When the function is called, we pass along a first name, which is used inside the function to print the full name:
+
+// Example
+void myFunction(string fname) {
+    cout << fname << " Refsnes\n";
+}
+
+int main() {
+    myFunction("Liam");
+    myFunction("Jenny");
+    myFunction("Anja");
+    return 0;
+}
+
+// Liam Refsnes
+// Jenny Refsnes
+// Anja Refsnes
+
+// When a parameter is passed to the function, it is called an argument. So, from the example above: fname is a parameter, while Liam, Jenny and Anja are arguments.
+```
+
+## C++ Default Parameters
+
+```c++
+// Default Parameter Value
+// You can also use a default parameter value, by using the equals sign (=).
+
+// If we call the function without an argument, it uses the default value ("Norway"):
+
+Example
+void myFunction(string country = "Norway") {
+    cout << country << "\n";
+}
+
+int main() {
+    myFunction("Sweden");
+    myFunction("India");
+    myFunction();
+    myFunction("USA");
+    return 0;
+}
+
+// Sweden
+// India
+// Norway
+// USA
+// A parameter with a default value, is often known as an "optional parameter". From the example above, country is an optional parameter and "Norway" is the default value.
+```
+
+## C++ Multiple Parameters
+
+```c++
+// Multiple Parameters
+// Inside the function, you can add as many parameters as you want:
+
+// Example
+void myFunction(string fname, int age) {
+    cout << fname << " Refsnes. " << age << " years old. \n";
+}
+
+int main() {
+    myFunction("Liam", 3);
+    myFunction("Jenny", 14);
+    myFunction("Anja", 30);
+    return 0;
+}
+
+// Liam Refsnes. 3 years old.
+// Jenny Refsnes. 14 years old.
+// Anja Refsnes. 30 years old.
+
+// Note that when you are working with multiple parameters, the function call must have the same number of arguments as there are parameters, and the arguments must be passed in the same order.
+```
+
+## C++ The Return Keyword
+
+```c++
+// Return Values
+// The void keyword, used in the previous examples, indicates that the function should not return a value. If you want the function to return a value, you can use a data type (such as int, string, etc.) instead of void, and use the return keyword inside the function:
+
+// Example
+int myFunction(int x) {
+    return 5 + x;
+}
+
+int main() {
+    cout << myFunction(3);
+    return 0;
+}
+
+// Outputs 8 (5 + 3)
+// This example returns the sum of a function with two parameters:
+
+// Example
+int myFunction(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    cout << myFunction(5, 3);
+    return 0;
+}
+
+// Outputs 8 (5 + 3)
+// You can also store the result in a variable:
+
+// Example
+int myFunction(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int z = myFunction(5, 3);
+    cout << z;
+    return 0;
+}
+// Outputs 8 (5 + 3)
+```
+
+## C++ Functions - Pass By Reference
+
+```c++
+// Pass By Reference
+// In the examples from the previous page, we used normal variables when we passed parameters to a function. You can also pass a reference to the function. This can be useful when you need to change the value of the arguments:
+
+// Example
+void swapNums(int &x, int &y) {
+    int z = x;
+    x = y;
+    y = z;
+}
+
+int main() {
+    int firstNum = 10;
+    int secondNum = 20;
+
+    cout << "Before swap: " << "\n";
+    cout << firstNum << secondNum << "\n";
+
+    // Call the function, which will change the values of firstNum and secondNum
+    swapNums(firstNum, secondNum);
+
+    cout << "After swap: " << "\n";
+    cout << firstNum << secondNum << "\n";
+
+    return 0;
+}
+```
+
+```c++
+// C++ Pass Array to a Function
+// Pass Arrays as Function Parameters
+// You can also pass arrays to a function:
+
+// Example
+void myFunction(int myNumbers[5]) {
+    for (int i = 0; i < 5; i++) {
+        cout << myNumbers[i] << "\n";
+    }
+}
+
+int main() {
+    int myNumbers[5] = {10, 20, 30, 40, 50};
+    myFunction(myNumbers);
+    return 0;
+}
+// Example Explained
+// The function (myFunction) takes an array as its parameter (int myNumbers[5]), and loops through the array elements with the for loop.
+
+// When the function is called inside main(), we pass along the myNumbers array, which outputs the array elements.
+
+// Note that when you call the function, you only need to use the name of the array when passing it as an argument myFunction(myNumbers). However, the full declaration of the array is needed in the function parameter (int myNumbers[5]).
+```
+
+## C++ Function Overloading
+
+```c++
+// Function Overloading
+// With function overloading, multiple functions can have the same name with different parameters:
+
+// Example
+int myFunction(int x)
+float myFunction(float x)
+double myFunction(double x, double y)
+// Consider the following example, which have two functions that add numbers of different type:
+
+// Example
+int plusFuncInt(int x, int y) {
+    return x + y;
+}
+
+double plusFuncDouble(double x, double y) {
+    return x + y;
+}
+
+int main() {
+    int myNum1 = plusFuncInt(8, 5);
+    double myNum2 = plusFuncDouble(4.3, 6.26);
+    cout << "Int: " << myNum1 << "\n";
+    cout << "Double: " << myNum2;
+    return 0;
+}
+// Instead of defining two functions that should do the same thing, it is better to overload one.
+
+// In the example below, we overload the plusFunc function to work for both int and double:
+
+// Example
+int plusFunc(int x, int y) {
+    return x + y;
+}
+
+double plusFunc(double x, double y) {
+    return x + y;
+}
+
+int main() {
+    int myNum1 = plusFunc(8, 5);
+    double myNum2 = plusFunc(4.3, 6.26);
+    cout << "Int: " << myNum1 << "\n";
+    cout << "Double: " << myNum2;
+    return 0;
+}
+// Note: Multiple functions can have the same name as long as the number and/or type of parameters are different.
+```
+
+## C++ Recursion
+
+```c++
+// Recursion
+// Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
+
+// Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.
+
+// Recursion Example
+// Adding two numbers together is easy to do, but adding a range of numbers is more complicated. In the following example, recursion is used to add a range of numbers together by breaking it down into the simple task of adding two numbers:
+
+// Example
+int sum(int k) {
+    if (k > 0) {
+        return k + sum(k - 1);
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int result = sum(10);
+    cout << result;
+    return 0;
+}
+// Example Explained
+// When the sum() function is called, it adds parameter k to the sum of all numbers smaller than k and returns the result. When k becomes 0, the function just returns 0. When running, the program follows these steps:
+
+// 10 + sum(9)
+// 10 + ( 9 + sum(8) )
+// 10 + ( 9 + ( 8 + sum(7) ) )
+// ...
+// 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + sum(0)
+// 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0
+// Since the function does not call itself when k is 0, the program stops there and returns the result.
+
+// The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.
+```
+
+## C++ Classes and Objects
+
+```c++
+// When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.
+
+// Object − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors - wagging, barking, eating. An object is an instance of a class.
+
+// Class − A class can be defined as a template/blueprint that describes the behaviors/states that object of its type support.
+
+// Methods − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.
+
+// Instance Variables − Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables.
+
+
+
+// C++ Classes/Objects
+// C++ is an object-oriented programming language.
+
+// Everything in C++ is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+
+// Attributes and methods are basically variables and functions that belongs to the class. These are often referred to as "class members".
+
+// A class is a user-defined data type that we can use in our program, and it works as an object constructor, or a "blueprint" for creating objects.
+
+// Create a Class
+// To create a class, use the class keyword:
+
+// Example
+// Create a class called "MyClass":
+
+class MyClass {       // The class
+    public:             // Access specifier
+        int myNum;        // Attribute (int variable)
+        string myString;  // Attribute (string variable)
+};
+// Example explained
+// The class keyword is used to create a class called MyClass.
+// The public keyword is an access specifier, which specifies that members (attributes and methods) of the class are accessible from outside the class. You will learn more about access specifiers later.
+// Inside the class, there is an integer variable myNum and a string variable myString. When variables are declared within a class, they are called attributes.
+// At last, end the class definition with a semicolon ;.
+// Create an Object
+// In C++, an object is created from a class. We have already created the class named MyClass, so now we can use this to create objects.
+
+// To create an object of MyClass, specify the class name, followed by the object name.
+
+// To access the class attributes (myNum and myString), use the dot syntax (.) on the object:
+
+// Example
+// Create an object called "myObj" and access the attributes:
+
+class MyClass {       // The class
+    public:             // Access specifier
+        int myNum;        // Attribute (int variable)
+        string myString;  // Attribute (string variable)
+};
+
+int main() {
+    MyClass myObj;  // Create an object of MyClass
+
+    // Access attributes and set values
+    myObj.myNum = 15; 
+    myObj.myString = "Some text";
+
+    // Print attribute values
+    cout << myObj.myNum << "\n";
+    cout << myObj.myString;
+    return 0;
+}
+// Multiple Objects
+// You can create multiple objects of one class:
+
+// Example
+// Create a Car class with some attributes
+class Car {
+    public:
+        string brand;   
+        string model;
+        int year;
+};
+
+int main() {
+    // Create an object of Car
+    Car carObj1;
+    carObj1.brand = "BMW";
+    carObj1.model = "X5";
+    carObj1.year = 1999;
+
+    // Create another object of Car
+    Car carObj2;
+    carObj2.brand = "Ford";
+    carObj2.model = "Mustang";
+    carObj2.year = 1969;
+
+    // Print attribute values
+    cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+    cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+    return 0;
+}
+```
+
+## C++ Class Methods
+
+```c++
+// Class Methods
+// Methods are functions that belongs to the class.
+
+// There are two ways to define functions that belongs to a class:
+
+// Inside class definition
+// Outside class definition
+// In the following example, we define a function inside the class, and we name it "myMethod".
+
+// Note: You access methods just like you access attributes; by creating an object of the class and using the dot syntax (.):
+
+// Inside Example
+class MyClass {        // The class
+    public:              // Access specifier
+        void myMethod() {  // Method/function defined inside the class
+        cout << "Hello World!";
+        }
+};
+
+int main() {
+    MyClass myObj;     // Create an object of MyClass
+    myObj.myMethod();  // Call the method
+    return 0;
+}
+// To define a function outside the class definition, you have to declare it inside the class and then define it outside of the class. This is done by specifiying the name of the class, followed the scope resolution :: operator, followed by the name of the function:
+
+// Outside Example
+class MyClass {        // The class
+    public:              // Access specifier
+        void myMethod();   // Method/function declaration
+};
+
+// Method/function definition outside the class
+void MyClass::myMethod() {
+    cout << "Hello World!";
+}
+
+int main() {
+    MyClass myObj;     // Create an object of MyClass
+    myObj.myMethod();  // Call the method
+    return 0;
+}
+// Parameters
+// You can also add parameters:
+
+//  Example
+#include <iostream>
+using namespace std;
+
+class Car {
+    public:
+        int speed(int maxSpeed);
+};
+
+int Car::speed(int maxSpeed) {
+    return maxSpeed;
+}
+
+int main() {
+    Car myObj; // Create an object of Car
+    cout << myObj.speed(200); // Call the method with an argument
+    return 0;
+}
+```
+
+## C++ Constructors
+
+```c++
+// Constructors
+// A constructor in C++ is a special method that is automatically called when an object of a class is created.
+
+// To create a constructor, use the same name as the class, followed by parentheses ():
+
+// Example
+class MyClass {     // The class
+    public:           // Access specifier
+        MyClass() {     // Constructor
+            cout << "Hello World!";
+        }
+};
+
+int main() {
+    MyClass myObj;    // Create an object of MyClass (this will call the constructor)
+    return 0;
+}
+// Note: The constructor has the same name as the class, it is always public, and it does not have any return value.
+
+// Constructor Parameters
+// Constructors can also take parameters (just like regular functions), which can be useful for setting initial values for attributes.
+
+// The following class have brand, model and year attributes, and a constructor with different parameters. Inside the constructor we set the attributes equal to the constructor parameters (brand=x, etc). When we call the constructor (by creating an object of the class), we pass parameters to the constructor, which will set the value of the corresponding attributes to the same:
+
+// Example
+class Car {        // The class
+    public:          // Access specifier
+        string brand;  // Attribute
+        string model;  // Attribute
+        int year;      // Attribute
+        Car(string x, string y, int z) { // Constructor with parameters
+            brand = x;
+            model = y;
+            year = z;
+        }
+};
+
+int main() {
+    // Create Car objects and call the constructor with different values
+    Car carObj1("BMW", "X5", 1999);
+    Car carObj2("Ford", "Mustang", 1969);
+
+    // Print values
+    cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+    cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+    return 0;
+}
+// Just like functions, constructors can also be defined outside the class. First, declare the constructor inside the class, and then define it outside of the class by specifying the name of the class, followed by the scope resolution :: operator, followed by the name of the constructor (which is the same as the class):
+
+// Example
+class Car {        // The class
+    public:          // Access specifier
+        string brand;  // Attribute
+        string model;  // Attribute
+        int year;      // Attribute
+        Car(string x, string y, int z); // Constructor declaration
+};
+
+// Constructor definition outside the class
+Car::Car(string x, string y, int z) {
+    brand = x;
+    model = y;
+    year = z;
+}
+
+int main() {
+    // Create Car objects and call the constructor with different values
+    Car carObj1("BMW", "X5", 1999);
+    Car carObj2("Ford", "Mustang", 1969);
+
+    // Print values
+    cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+    cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+    return 0;
+}
+```
+
+## C++ Access Specifiers
+
+```c++
+// Access Specifiers
+// By now, you are quite familiar with the public keyword that appears in all of our class examples:
+
+// Example
+class MyClass {  // The class
+    public:        // Access specifier
+        // class members goes here
+};
+// The public keyword is an access specifier. Access specifiers define how the members (attributes and methods) of a class can be accessed. In the example above, the members are public - which means that they can be accessed and modified from outside the code.
+
+// However, what if we want members to be private and hidden from the outside world?
+
+// In C++, there are three access specifiers:
+
+// public - members are accessible from outside the class
+// private - members cannot be accessed (or viewed) from outside the class
+// protected - members cannot be accessed from outside the class, however, they can be accessed in inherited classes. You will learn more about Inheritance later.
+// In the following example, we demonstrate the differences between public and private members:
+
+// Example
+class MyClass {
+    public:    // Public access specifier
+        int x;   // Public attribute
+    private:   // Private access specifier
+        int y;   // Private attribute
+};
+
+int main() {
+    MyClass myObj;
+    myObj.x = 25;  // Allowed (public)
+    myObj.y = 50;  // Not allowed (private)
+    return 0;
+}
+// If you try to access a private member, an error occurs:
+
+// error: y is private
+// Note: It is possible to access private members of a class using a public method inside the same class. See the next chapter (Encapsulation) on how to do this.
+
+// Tip: It is considered good practice to declare your class attributes as private (as often as you can). This will reduce the possibility of yourself (or others) to mess up the code. This is also the main ingredient of the Encapsulation concept, which you will learn more about in the next chapter.
+
+// Note: By default, all members of a class are private if you don't specify an access specifier:
+
+// Example
+class MyClass {
+    int x;   // Private attribute
+    int y;   // Private attribute
+};
+```
+
+## C++ Encapsulation
+
+```c++
+// Encapsulation
+// The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must declare class variables/attributes as private (cannot be accessed from outside the class). If you want others to read or modify the value of a private member, you can provide public get and set methods.
+
+// Access Private Members
+// To access a private attribute, use public "get" and "set" methods:
+
+// Example
+#include <iostream>
+using namespace std;
+
+class Employee {
+    private:
+        // Private attribute
+        int salary;
+
+    public:
+        // Setter
+        void setSalary(int s) {
+            salary = s;
+        }
+        // Getter
+        int getSalary() {
+            return salary;
+        }
+};
+
+int main() {
+    Employee myObj;
+    myObj.setSalary(50000);
+    cout << myObj.getSalary();
+    return 0;
+}
+// Example explained
+// The salary attribute is private, which have restricted access.
+
+// The public setSalary() method takes a parameter (s) and assigns it to the salary attribute (salary = s).
+
+// The public getSalary() method returns the value of the private salary attribute.
+
+// Inside main(), we create an object of the Employee class. Now we can use the setSalary() method to set the value of the private attribute to 50000. Then we call the getSalary() method on the object to return the value.
+
+// Why Encapsulation?
+// It is considered good practice to declare your class attributes as private (as often as you can). Encapsulation ensures better control of your data, because you (or others) can change one part of the code without affecting other parts
+// Increased security of data
+```
+
+## C++ Inheritance
+
+```c++
+// Inheritance
+// In C++, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:
+
+// derived class (child) - the class that inherits from another class
+// base class (parent) - the class being inherited from
+// To inherit from a class, use the : symbol.
+
+// In the example below, the Car class (child) inherits the attributes and methods from the Vehicle class (parent):
+
+// Example
+// Base class
+class Vehicle {
+    public:
+        string brand = "Ford";
+        void honk() {
+            cout << "Tuut, tuut! \n" ;
+        }
+};
+
+// Derived class
+class Car: public Vehicle {
+    public:
+        string model = "Mustang";
+};
+
+int main() {
+    Car myCar;
+    myCar.honk();
+    cout << myCar.brand + " " + myCar.model;
+    return 0;
+}
+// Why And When To Use "Inheritance"?
+// - It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+```
+
+```c++
+// C++ Multilevel Inheritance
+// Multilevel Inheritance
+// A class can also be derived from one class, which is already derived from another class.
+
+// In the following example, MyGrandChild is derived from class MyChild (which is derived from MyClass).
+
+// Example
+// Base class (parent)
+class MyClass {
+    public:
+        void myFunction() {
+            cout << "Some content in parent class." ;
+        }
+};
+
+// Derived class (child)
+class MyChild: public MyClass {
+};
+
+// Derived class (grandchild)
+class MyGrandChild: public MyChild {
+};
+
+int main() {
+    MyGrandChild myObj;
+    myObj.myFunction();
+    return 0;
+}
+```
+
+## C++ Multiple Inheritance
+
+```c++
+// Multiple Inheritance
+// A class can also be derived from more than one base class, using a comma-separated list:
+
+// Example
+// Base class
+class MyClass {
+    public:
+        void myFunction() {
+            cout << "Some content in parent class." ;
+        }
+};
+
+// Another base class
+class MyOtherClass {
+    public:
+        void myOtherFunction() {
+            cout << "Some content in another class." ;
+        }
+};
+
+// Derived class
+class MyChildClass: public MyClass, public MyOtherClass {
+};
+
+int main() {
+    MyChildClass myObj;
+    myObj.myFunction();
+    myObj.myOtherFunction();
+    return 0;
+}
+```
+
+## C++ Inheritance Access
+
+```c++
+// Access Specifiers
+// You learned from the Access Specifiers chapter that there are three specifiers available in C++. Until now, we have only used public (members of a class are accessible from outside the class) and private (members can only be accessed within the class). The third specifier, protected, is similar to private, but it can also be accessed in the inherited class:
+
+// Example
+// Base class
+class Employee {
+    protected: // Protected access specifier
+        int salary;
+};
+
+// Derived class
+class Programmer: public Employee {
+    public:
+        int bonus;
+        void setSalary(int s) {
+            salary = s;
+        }
+        int getSalary() {
+            return salary;
+        }
+};
+
+int main() {
+    Programmer myObj;
+    myObj.setSalary(50000);
+    myObj.bonus = 15000;
+    cout << "Salary: " << myObj.getSalary() << "\n";
+    cout << "Bonus: " << myObj.bonus << "\n";
+    return 0;
+}
+```
+
+## C++ Polymorphism
+
+```c++
+// Polymorphism
+// Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+
+// Like we specified in the previous chapter; Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.
+
+// For example, think of a base class called Animal that has a method called animalSound(). Derived classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):
+
+// Example
+// Base class
+class Animal {
+    public:
+        void animalSound() {
+            cout << "The animal makes a sound \n";
+        }
+};
+
+// Derived class
+class Pig : public Animal {
+    public:
+        void animalSound() {
+            cout << "The pig says: wee wee \n";
+        }
+};
+
+// Derived class
+class Dog : public Animal {
+    public:
+        void animalSound() {
+            cout << "The dog says: bow wow \n";
+        }
+};
+// Remember from the Inheritance chapter that we use the : symbol to inherit from a class.
+
+// Now we can create Pig and Dog objects and override the animalSound() method:
+
+// Example
+// Base class
+class Animal {
+    public:
+        void animalSound() {
+            cout << "The animal makes a sound \n";
+        }
+};
+
+// Derived class
+class Pig : public Animal {
+    public:
+        void animalSound() {
+            cout << "The pig says: wee wee \n";
+        }
+};
+
+// Derived class
+class Dog : public Animal {
+    public:
+        void animalSound() {
+            cout << "The dog says: bow wow \n";
+        }
+};
+
+int main() {
+    Animal myAnimal;
+    Pig myPig;
+    Dog myDog;
+
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+    return 0;
+}
+// Why And When To Use "Inheritance" and "Polymorphism"?
+// - It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+```
+
+## C++ Files
+
+```c++
+// C++ Files
+// The fstream library allows us to work with files.
+
+// To use the fstream library, include both the standard <iostream> AND the <fstream> header file:
+
+// Example
+#include <iostream>
+#include <fstream>
+// There are three classes included in the fstream library, which are used to create, write or read files:
+
+// Class	Description
+// ofstream	Creates and writes to files
+// ifstream	Reads from files
+// fstream	A combination of ofstream and ifstream: creates, reads, and writes to files
+// Create and Write To a File
+// To create a file, use either the ofstream or fstream class, and specify the name of the file.
+
+// To write to the file, use the insertion operator (<<).
+
+// Example
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    // Create and open a text file
+    ofstream MyFile("filename.txt");
+
+    // Write to the file
+    MyFile << "Files can be tricky, but it is fun enough!";
+
+    // Close the file
+    MyFile.close();
+}
+// Why do we close the file?
+// It is considered good practice, and it can clean up unnecessary memory space.
+
+// ADVERTISEMENT
+
+// Read a File
+// To read from a file, use either the ifstream or fstream class, and the name of the file.
+
+// Note that we also use a while loop together with the getline() function (which belongs to the ifstream class) to read the file line by line, and to print the content of the file:
+
+// Example
+// Create a text string, which is used to output the text file
+string myText;
+
+// Read from the text file
+ifstream MyReadFile("filename.txt");
+
+// Use a while loop together with the getline() function to read the file line by line
+while (getline (MyReadFile, myText)) {
+    // Output the text from the file
+    cout << myText;
+}
+
+// Close the file
+MyReadFile.close();
+```
+
+## C++ Exceptions
+
+```c++
+// C++ Exceptions
+// When executing C++ code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.
+
+// When an error occurs, C++ will normally stop and generate an error message. The technical term for this is: C++ will throw an exception (throw an error).
+
+// C++ try and catch
+// Exception handling in C++ consist of three keywords: try, throw and catch:
+
+// The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+// The throw keyword throws an exception when a problem is detected, which lets us create a custom error.
+
+// The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+// The try and catch keywords come in pairs:
+
+// Example
+try {
+    // Block of code to try
+    throw exception; // Throw an exception when a problem arise
+}
+catch () {
+    // Block of code to handle errors
+}
+// Consider the following example:
+
+// Example
+try {
+    int age = 15;
+    if (age >= 18) {
+        cout << "Access granted - you are old enough.";
+    } else {
+        throw (age);
+    }
+}
+catch (int myNum) {
+    cout << "Access denied - You must be at least 18 years old.\n";
+    cout << "Age is: " << myNum;
+}
+// Example explained
+// We use the try block to test some code: If the age variable is less than 18, we will throw an exception, and handle it in our catch block.
+
+// In the catch block, we catch the error and do something about it. The catch statement takes a parameter: in our example we use an int variable (myNum) (because we are throwing an exception of int type in the try block (age)), to output the value of age.
+
+// If no error occurs (e.g. if age is 20 instead of 15, meaning it will be be greater than 18), the catch block is skipped:
+
+// Example
+// int age = 20;
+// You can also use the throw keyword to output a reference number, like a custom error number/code for organizing purposes:
+
+// Example
+try {
+    int age = 15;
+    if (age >= 18) {
+        cout << "Access granted - you are old enough.";
+    } else {
+        throw 505;
+    }
+}
+catch (int myNum) {
+    cout << "Access denied - You must be at least 18 years old.\n";
+    cout << "Error number: " << myNum;
+}
+// Handle Any Type of Exceptions (...)
+// If you do not know the throw type used in the try block, you can use the "three dots" syntax (...) inside the catch block, which will handle any type of exception:
+
+// Example
+try {
+    int age = 15;
+    if (age >= 18) {
+        cout << "Access granted - you are old enough.";
+    } else {
+        throw 505;
+    }
+}
+catch (...) {
+    cout << "Access denied - You must be at least 18 years old.\n";
+}
+```
