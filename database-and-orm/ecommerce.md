@@ -2,6 +2,26 @@
 
 We are building an e-commerce system, and we need to manage products, orders, and customers.
 
+## Setting database:
+
+Enter mysql command prompt:
+
+```sh
+sudo mysql
+```
+
+Create database
+
+```sh
+CREATE DATABASE ecommerce;
+```
+
+Instanciate the database to use
+
+```sh
+USE ecommerce;
+```
+
 ## Database Schema:
 
 Start by designing the schema with tables like:
