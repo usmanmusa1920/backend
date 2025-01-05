@@ -19,3 +19,10 @@ python3 -c "import webbrowser; webbrowser.get().open('/home/usman/Desktop/acode'
 
 
 # python route.py payloadip -i 68.183.36.180
+
+
+# Download entire site:
+# To download all files available on the domain https://ugs.fugusau.edu.ng, including files from other routes or subdirectories, you can use the following wget command:
+#       wget --mirror https://ugs.fugusau.edu.ng
+
+# Recursive Downloads: The --mirror option ensures the command downloads all subdirectories and files.
